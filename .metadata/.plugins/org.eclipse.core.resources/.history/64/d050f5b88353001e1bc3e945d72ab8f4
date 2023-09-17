@@ -1,0 +1,24 @@
+package programacaoOrientadaAObjetos;
+
+public class poo {
+	public static void main(String[] args) {
+		
+		Conta primeiraConta = new Conta();
+		primeiraConta.saldo = 200;
+		
+		Conta segundaConta = primeiraConta;
+		
+		segundaConta.depositar(100);
+		
+		boolean retirou = segundaConta.sacar(150);
+		
+		if(retirou) {
+			System.out.println("saque efetuado com secesso!!");
+			System.out.println("seu novo saldo é: " + segundaConta.saldo + "reais");
+		}else {
+			System.out.println("saldo insuficiente!!");
+			System.out.println("seu saldo continua: " + segundaConta.saldo + " reais");
+		}	
+		
+	}
+}

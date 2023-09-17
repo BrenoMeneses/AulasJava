@@ -1,0 +1,17 @@
+package heranca;
+
+public class heranca {
+	
+	public static void main(String[] args) {
+		
+		Funcionario breno = new Funcionario();
+		breno.setNome("Breno");
+		breno.setCpf("999-9999-999-99");
+		breno.setCargo("dev");
+		breno.setSalario(2000);
+		
+		System.out.println(breno.bonificacao() + " " + breno.getCpf());
+		
+	}
+	
+}

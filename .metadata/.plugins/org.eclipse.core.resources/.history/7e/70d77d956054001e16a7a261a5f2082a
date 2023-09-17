@@ -1,0 +1,17 @@
+package heranca;
+
+public class SistemaInterno {
+	
+	public SistemaInterno() {
+		
+	}
+	
+	public void entrarNoSistema(Autenticavel funcionario, String senha) {
+		if(funcionario.autenticaSenha(senha)) {
+			System.out.println("bem vindo ao sistema");
+		}else {
+			System.out.println("senha incorreta!!");
+		}
+	}
+	
+}

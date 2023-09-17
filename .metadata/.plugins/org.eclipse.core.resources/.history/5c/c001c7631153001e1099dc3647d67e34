@@ -1,0 +1,41 @@
+package sintaxe_variaveis_e_fluxo;
+
+/**
+ * 
+ */
+public class testaVariaveis {
+
+	public static void main(String[] args) {
+		
+		System.out.println("VARIAVEIS INTEIRAS");
+		
+		int idade = 90;
+		
+		System.out.println("sua idade é " + idade);
+		
+		System.out.println("VARIAVEIS DOUBLE");
+		
+		double salario = 1000.40;
+		
+		System.out.println("seu salario é " + salario);
+		
+		System.out.println("CONVERSAO");
+		
+		int valor = (int) salario;
+		
+		System.out.println(valor);
+		
+		System.out.println("numericos");
+		
+		long numeroGrande = 34123123123L;
+		
+		short numeroPequeno = 1233;
+		
+		byte b = 123;
+		
+		double valor1 = 0.2;
+		double valor2 = 0.1;
+		System.out.println(valor1 + valor2);
+	}
+
+}

@@ -1,0 +1,17 @@
+package heranca;
+
+public abstract class Autenticavel {
+
+	private String senha = "12345";
+	
+	public boolean autenticaSenha(String senha) {
+		if(senha == this.senha) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+
+	
+}

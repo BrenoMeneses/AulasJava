@@ -1,0 +1,61 @@
+package programacaoOrientadaAObjetos;
+
+public class Conta {
+
+	private double saldo = 0;
+	private int agencia;
+	private Cliente cliente;
+	
+	public Conta(int agencia, Cliente cliente) {
+		this.agencia = agencia;
+		this.cliente = cliente;
+	}
+	
+	public double pegarSaldo() {
+		return this.saldo;
+	}
+
+	public double pegarAgencia() {
+		return this.agencia;
+	}
+	
+	public void mudarAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	public Cliente getCliente() {
+		return this.cliente;
+	}
+	
+	public void depositar(double valor) {
+		this.saldo = this.saldo + valor;
+	}
+
+	public boolean sacar(double valor) {
+		if (valor > saldo) {
+			System.out.println("saldo insuficiente!!");
+			System.out.println("seu saldo continua: " + this.saldo + " reais\n");
+			return false;
+		} else {
+			this.saldo = this.saldo - valor;
+			System.out.println("saque efetuado com secesso!!");
+			System.out.println("seu novo saldo é: " + this.saldo + " reais\n");
+			return true;
+		}
+	}
+
+	public boolean transferir(double valor, Conta destino, Conta origem) {
+		if (valor > saldo) {
+			return false;
+		} else {
+			origem.sacar(valor);
+			destino.depositar(valor);
+			return true;
+		}
+	}
+
+}

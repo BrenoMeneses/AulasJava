@@ -1,0 +1,21 @@
+package heranca;
+
+public abstract class Autenticavel extends Funcionario {
+
+	private String senha = "12345";
+	
+	public Autenticavel(String nome, String cargo, double salario) {
+		super(nome, cargo, salario);
+	}
+	
+	public boolean autenticaSenha(String senha) {
+		if(senha == this.senha) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+
+	
+}

@@ -1,0 +1,14 @@
+package programacaoOrientadaAObjetos;
+
+public class poo {
+	public static void main(String[] args) {
+		Conta primeiraConta = new Conta();
+		primeiraConta.saldo = 200;
+		
+		Conta segundaConta = primeiraConta;
+		
+		segundaConta.depositar(100);
+		
+		System.out.println(segundaConta.saldo);
+	}
+}

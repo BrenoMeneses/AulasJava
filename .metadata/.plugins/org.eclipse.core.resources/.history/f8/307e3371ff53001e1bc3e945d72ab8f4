@@ -1,0 +1,9 @@
+package heranca;
+
+public class Desenvolvedor extends Funcionario {
+	
+	public Desenvolverdor(String nome, String cargo, double salario) {
+		
+	}
+	
+}

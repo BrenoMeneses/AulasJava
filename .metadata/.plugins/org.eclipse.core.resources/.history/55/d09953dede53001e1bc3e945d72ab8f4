@@ -1,0 +1,30 @@
+package heranca;
+
+public class heranca {
+	
+	public static void main(String[] args) {
+		
+		Funcionario breno = new Funcionario();
+		breno.setNome("Breno");
+		breno.setCpf("999-9999-999-99");
+		breno.setCargo("dev");
+		breno.setSalario(5000);
+		
+		System.out.println(breno.getNome() + " " + breno.getCargo());
+		
+		Gerente anny = new Gerente();
+		anny.setNome("Anny");
+		anny.setCpf("888-888-888-88");
+		anny.setCargo("gerente");
+		anny.setSalario(5000);
+		anny.setSenha("12345");
+		
+		System.out.println(anny.getNome() + " " + anny.getCargo());
+		System.out.println("\nverificação da senha: " + anny.autenticaSenha("1234"));
+		
+		System.out.println("\nbonificação gerente:" + anny.bonificacao());
+		System.out.println("bonificação funcionario comum: " + breno.bonificacao());
+		
+	}
+	
+}

@@ -1,0 +1,19 @@
+package heranca;
+
+public class SistemaInterno {
+	
+	private String senha = "12345";
+	
+	public SistemaInterno() {
+		
+	}
+	
+	public void entrarNoSistema(Gerente gerente) {
+		if(gerente.autenticaSenha(senha)) {
+			System.out.println("bem vindo ao sistema");
+		}else {
+			System.out.println("senha incorreta");
+		}
+	}
+	
+}

@@ -1,0 +1,41 @@
+package programacaoOrientadaAObjetos;
+
+public class poo {
+	public static void main(String[] args) {
+
+		Conta segundaConta = new Conta();
+		segundaConta.depositar(300);
+
+		Cliente breno = new Cliente();
+		breno.nome = "Breno";
+		breno.cpf = "999-999-999-99";
+		breno.profissao = "desenvolvedor";
+		
+		segundaConta.cliente = breno;
+		
+		Conta terceiraConta = new Conta();
+		terceiraConta.depositar(1000);
+
+		boolean retirou = segundaConta.sacar(150);
+		if (retirou) {
+			System.out.println("saque efetuado com secesso!!");
+			System.out.println("seu novo saldo é: " + segundaConta.pegarSaldo() + " reais\n");
+		} else {
+			System.out.println("saldo insuficiente!!");
+			System.out.println("seu saldo continua: " + segundaConta.pegarSaldo() + " reais\n");
+		}
+
+		boolean transferiu = segundaConta.transferir(1000, terceiraConta, segundaConta);
+		if (transferiu) {
+			System.out.println("transferência efetuada com secesso!!");
+			System.out.println("seu novo saldo é: " + segundaConta.pegarSaldo() + " reais\n");
+		} else {
+			System.out.println("saldo insuficiente!!");
+			System.out.println("seu saldo continua: " + segundaConta.pegarSaldo() + " reais");
+			System.out.println("saldo da conta transferida " + terceiraConta.pegarSaldo() + " reais\n");
+		}
+
+		System.out.println(segundaConta.cliente.nome);
+
+	}
+}

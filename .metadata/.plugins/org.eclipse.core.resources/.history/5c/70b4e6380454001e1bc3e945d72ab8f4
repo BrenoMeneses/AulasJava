@@ -1,0 +1,33 @@
+package heranca;
+
+public class Gerente extends Funcionario {
+
+	private String senha;
+	
+	public Gerente(String nome, String cargo, double salario, String senha) {
+		super(nome, cargo, salario);
+		this.senha = senha;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
+	
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
+	public boolean autenticaSenha(String senha) {
+		if(this.senha == senha) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	@Override
+	public double bonificacao() {
+		return super.getSalario();
+	}
+	
+}

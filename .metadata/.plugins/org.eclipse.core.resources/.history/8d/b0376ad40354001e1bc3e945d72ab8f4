@@ -1,0 +1,17 @@
+package heranca;
+
+public class Administrador extends Funcionario {
+
+	private String senha;
+	
+	public Administrador(String nome, String cargo, double salario, String senha) {
+		super(nome, cargo, salario);
+		this.senha = senha;
+	}
+	
+	@Override
+	public double bonificacao() {
+		return (super.getSalario() / 100) * 50;
+	}
+	
+}

@@ -1,0 +1,22 @@
+package programacaoOrientadaAObjetos;
+
+public class Conta {
+	
+	double saldo;
+	int agencia;
+	int numero;
+	String nome;
+	
+	public void depositar(double valor) {
+		this.saldo = this.saldo + valor;
+	}
+	
+	public boolean sacar(double valor) {
+		if(valor > saldo) {
+			return false;
+		}else {
+			this.saldo = this.saldo - valor;
+			return true;
+		}
+	}
+}

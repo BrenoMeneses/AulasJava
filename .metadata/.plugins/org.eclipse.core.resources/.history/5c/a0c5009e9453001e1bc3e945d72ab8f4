@@ -1,0 +1,24 @@
+package programacaoOrientadaAObjetos;
+
+public class poo {
+	public static void main(String[] args) {
+
+		Cliente breno = new Cliente("Breno", "999-999-999-99", "desenvolvedor");
+		
+		Cliente anny = new Cliente("Anny", "888-888-888-88", "publicitária");
+		
+		Conta segundaConta = new Conta(12345, breno);
+		segundaConta.depositar(300);
+		
+		Conta terceiraConta = new Conta(54321, anny);
+		terceiraConta.depositar(1000);
+
+		segundaConta.sacar(15);
+
+		segundaConta.transferir(1000, terceiraConta, segundaConta);
+
+		System.out.println(segundaConta.getCliente().getNome());
+		System.out.println(terceiraConta.getCliente().getNome());
+
+	}
+}

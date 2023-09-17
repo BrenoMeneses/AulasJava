@@ -1,0 +1,9 @@
+package heranca;
+
+public abstract interface Autenticavel {
+	
+	public String getNome();
+	
+	public boolean autenticaSenha(String senha);
+	
+}

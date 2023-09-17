@@ -1,0 +1,45 @@
+package heranca;
+
+public class heranca {
+	
+	public static void main(String[] args) {
+		
+		Cliente mario = new Cliente("mario", "666-666-666-66");
+		
+		System.out.println(mario.getNome() + " cliente");
+		
+		Desenvolvedor breno = new Desenvolvedor("Breno", "dev", 5000, "JAVA");
+		breno.setCpf("999-9999-999-99");
+		
+		System.out.println(breno.getNome() + " " + breno.getCargo());
+		
+		Gerente anny = new Gerente("Anny", "gerente", 5000);
+		anny.setCpf("888-888-888-88");
+		
+		System.out.println(anny.getNome() + " " + anny.getCargo());
+		
+		Administrador jose = new Administrador("José", "adm", 3000);
+		anny.setCpf("777-777-777-77");
+		
+		System.out.println(jose.getNome() + " " + jose.getCargo());
+		
+		System.out.println("\nbonificação gerente: " + anny.bonificacao());
+		System.out.println("bonificação desenvolvedor: " + breno.bonificacao());
+		System.out.println("bonificação administrador: " + jose.bonificacao());
+		
+		controleBonificacao controle = new controleBonificacao();
+		
+		controle.registra(anny);
+		controle.registra(breno);
+		controle.registra(jose);
+		
+		System.out.println("soma das bonificacoes é => " + controle.getSoma() + "\n");
+		
+		SistemaInterno sistema = new SistemaInterno();
+		
+		sistema.entrarNoSistema(mario, "12345");
+		sistema.entrarNoSistema(jose, "12345");
+		
+	}
+	
+}

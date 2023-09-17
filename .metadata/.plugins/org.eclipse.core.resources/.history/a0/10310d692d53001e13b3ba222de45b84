@@ -1,0 +1,20 @@
+package repeticoes;
+
+public class repeticoes {
+	public static void main(String[] args) {
+		
+		int numero = 8;
+		int contador = 0;
+		int resultado;
+		
+		while(contador <= 10) {
+			
+			resultado = numero * contador;
+			
+			System.out.println(numero + " * " + contador + " = " + resultado);
+			
+			contador++;
+		}
+		
+	}
+}

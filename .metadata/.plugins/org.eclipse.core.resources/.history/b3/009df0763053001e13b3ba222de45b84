@@ -1,0 +1,22 @@
+package repeticoes;
+
+public class repeticoes {
+	public static void main(String[] args) {
+
+		int numero = 8;
+		int contador = 1;
+		int resultado;
+
+		while (contador <= 10) {
+			
+			for(int i=1; i<=10; i++) {
+				
+				resultado = contador * i;
+				
+				System.out.print("|" + resultado + " ");
+			}
+			System.out.println("");
+			contador++;
+		}
+	}
+}
